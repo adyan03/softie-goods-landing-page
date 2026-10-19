@@ -1,0 +1,2796 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOFTIE GOODS — Tas Vintage Thrift Aesthetic | Unik, Timeless, Stylish</title>
+  <meta name="description" content="SOFTIE GOODS hadir dengan koleksi tas vintage thrift pilihan — unik, timeless, dan stylish. Temukan tas aesthetic favoritmu mulai Rp35.000. Beli di Shopee atau chat WhatsApp sekarang!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1a0f0a;
+      color: #f5ece4;
+      overflow-x: hidden;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* ===== COLOR TOKENS ===== */
+    :root {
+      --cream:     #f5ece4;
+      --blush:     #e8c4b2;
+      --rose:      #c9856a;
+      --mocha:     #8b5e52;
+      --espresso:  #4a2c2a;
+      --dark:      #1a0f0a;
+      --card-bg:   #2a1810;
+      --border:    rgba(201,133,106,0.25);
+      --gold:      #d4a574;
+      --wa-green:  #25D366;
+      --shopee-org:#EE4D2D;
+    }
+
+    /* ===== FLOATING CTA BAR ===== */
+    .float-cta {
+      position: fixed;
+      bottom: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      z-index: 999;
+      box-shadow: 0 -4px 24px rgba(0,0,0,0.5);
+    }
+    .float-cta a {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 10px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      color: #fff;
+      transition: filter 0.2s;
+    }
+    .float-cta a:active { filter: brightness(0.85); }
+    .float-cta .btn-wa  { background: var(--wa-green); }
+    .float-cta .btn-sp  { background: var(--shopee-org); }
+    .float-cta svg { width: 20px; height: 20px; fill: #fff; flex-shrink: 0; }
+
+    /* ===== SECTION COMMONS ===== */
+    section { padding: 52px 20px; }
+    .section-label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      line-height: 1.3;
+      color: var(--cream);
+      margin-bottom: 14px;
+    }
+    .section-title span { color: var(--rose); }
+    .section-body {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--blush);
+      opacity: 0.9;
+    }
+    .divider {
+      width: 48px; height: 3px;
+      background: linear-gradient(90deg, var(--rose), var(--gold));
+      border-radius: 2px;
+      margin: 16px 0;
+    }
+
+    /* ===== HERO ===== */
+    #hero {
+      padding: 0;
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+      background: linear-gradient(160deg, #2a1810 0%, #1a0f0a 100%);
+    }
+    .hero-bg-pattern {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(201,133,106,0.12) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(212,165,116,0.10) 0%, transparent 45%);
+    }
+    .hero-badge {
+      position: absolute;
+      top: 52px; right: 20px;
+      background: rgba(201,133,106,0.15);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+      border-radius: 50px;
+      padding: 6px 14px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: var(--gold);
+      text-transform: uppercase;
+      z-index: 3;
+    }
+
+    /* Collage of product images */
+    .hero-collage {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 62%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 4px;
+      padding: 52px 4px 0;
+    }
+    .hero-collage img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .hero-collage .img-main {
+      grid-row: 1 / 3;
+      border-radius: 0 0 0 16px;
+    }
+    .hero-collage .img-top-right  { border-radius: 0; }
+    .hero-collage .img-bot-right  { border-radius: 0 0 16px 0; }
+    .hero-collage::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 40%, #1a0f0a 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 20px 100px;
+    }
+    .hero-brand {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      color: var(--rose);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      line-height: 1.15;
+      color: var(--cream);
+      margin-bottom: 16px;
+    }
+    .hero-title em { color: var(--rose); font-style: italic; }
+    .hero-subtitle {
+      font-size: 13.5px;
+      line-height: 1.75;
+      color: var(--blush);
+      margin-bottom: 28px;
+    }
+    .hero-cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 24px;
+      border-radius: 50px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 13.5px;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(135deg, var(--shopee-org), #f07040);
+      box-shadow: 0 6px 24px rgba(238,77,45,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-primary:active { transform: scale(0.97); box-shadow: none; }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 22px;
+      border-radius: 50px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 13.5px;
+      text-decoration: none;
+      color: var(--cream);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(4px);
+      transition: background 0.2s;
+    }
+    .btn-secondary:active { background: rgba(255,255,255,0.15); }
+    .hero-stats {
+      display: flex;
+      gap: 0;
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    .hero-stat {
+      flex: 1;
+      text-align: center;
+    }
+    .hero-stat + .hero-stat { border-left: 1px solid var(--border); }
+    .hero-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--rose);
+    }
+    .hero-stat-label { font-size: 10px; color: var(--blush); opacity: 0.7; margin-top: 2px; }
+
+    /* ===== MARQUEE ===== */
+    .marquee-wrap {
+      background: linear-gradient(135deg, var(--rose), var(--mocha));
+      overflow: hidden;
+      padding: 10px 0;
+    }
+    .marquee-track {
+      display: flex;
+      gap: 28px;
+      white-space: nowrap;
+      animation: marquee 18s linear infinite;
+    }
+    .marquee-track span {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .marquee-track .dot { color: rgba(255,255,255,0.5); }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ===== ABOUT / INTEREST ===== */
+    #interest {
+      background: var(--dark);
+      position: relative;
+    }
+    #interest::before {
+      content: '"';
+      position: absolute;
+      top: 20px; right: 20px;
+      font-family: 'Playfair Display', serif;
+      font-size: 120px;
+      color: var(--rose);
+      opacity: 0.06;
+      line-height: 1;
+    }
+    .benefit-list { margin-top: 24px; display: flex; flex-direction: column; gap: 16px; }
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+    }
+    .benefit-icon {
+      width: 44px; height: 44px;
+      background: linear-gradient(135deg, var(--rose), var(--mocha));
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .benefit-title { font-weight: 600; font-size: 14px; color: var(--cream); margin-bottom: 4px; }
+    .benefit-desc  { font-size: 12.5px; color: var(--blush); opacity: 0.8; line-height: 1.6; }
+
+    /* ===== PRODUK GALLERY ===== */
+    #products {
+      background: var(--card-bg);
+      position: relative;
+      overflow: hidden;
+    }
+    #products::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,133,106,0.08) 0%, transparent 70%);
+    }
+    .product-scroll {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      padding: 4px 4px 12px;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+    }
+    .product-scroll::-webkit-scrollbar { display: none; }
+    .product-card {
+      flex: 0 0 200px;
+      background: var(--dark);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      scroll-snap-align: start;
+      transition: transform 0.3s;
+    }
+    .product-card:active { transform: scale(0.97); }
+    .product-img-wrap {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+    .product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .product-card:hover .product-img-wrap img { transform: scale(1.05); }
+    .product-badge {
+      position: absolute;
+      top: 10px; left: 10px;
+      background: linear-gradient(135deg, var(--rose), var(--mocha));
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 50px;
+      letter-spacing: 0.5px;
+    }
+    .product-info { padding: 14px; }
+    .product-name { font-weight: 600; font-size: 13px; color: var(--cream); margin-bottom: 4px; }
+    .product-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      color: var(--rose);
+      font-weight: 700;
+    }
+    .product-cta {
+      display: block;
+      margin: 10px 0 0;
+      text-align: center;
+      padding: 9px;
+      border-radius: 10px;
+      background: rgba(201,133,106,0.12);
+      border: 1px solid var(--border);
+      color: var(--rose);
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .product-cta:active { background: rgba(201,133,106,0.25); }
+
+    /* ===== FOR WHO ===== */
+    #forwho { background: var(--dark); }
+    .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
+    .who-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px 14px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .who-card::before {
+      content: '';
+      position: absolute;
+      bottom: -20px; right: -20px;
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,133,106,0.1) 0%, transparent 70%);
+    }
+    .who-emoji { font-size: 32px; margin-bottom: 10px; }
+    .who-title { font-weight: 600; font-size: 13px; color: var(--rose); margin-bottom: 6px; }
+    .who-desc  { font-size: 11.5px; color: var(--blush); opacity: 0.8; line-height: 1.5; }
+
+    /* ===== DESIRE / WHY ===== */
+    #desire {
+      background: linear-gradient(160deg, #2a1810 0%, var(--card-bg) 100%);
+      position: relative;
+      text-align: center;
+    }
+    .desire-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--cream);
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--rose);
+      border-radius: 16px;
+      padding: 24px 20px;
+      margin: 24px 0;
+      text-align: left;
+    }
+
+    /* ===== FACILITIES ===== */
+    #facilities { background: var(--card-bg); }
+    .facility-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
+    .facility-card {
+      background: var(--dark);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .facility-icon { font-size: 30px; margin-bottom: 10px; }
+    .facility-title { font-weight: 600; font-size: 13px; color: var(--cream); margin-bottom: 6px; }
+    .facility-desc  { font-size: 11.5px; color: var(--blush); opacity: 0.75; line-height: 1.5; }
+
+    /* ===== PRICE ===== */
+    #pricing { background: var(--dark); }
+    .price-list { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 18px;
+      transition: border-color 0.2s;
+    }
+    .price-row:first-child { border-color: var(--rose); }
+    .price-name {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--cream);
+    }
+    .price-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .price-tag {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--rose);
+    }
+    .price-note {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 12px;
+      color: var(--blush);
+      opacity: 0.65;
+    }
+
+    /* ===== TESTIMONIALS ===== */
+    #testimonials { background: var(--card-bg); }
+    .testi-scroll {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      padding: 4px 4px 12px;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      margin-top: 24px;
+    }
+    .testi-scroll::-webkit-scrollbar { display: none; }
+    .testi-card {
+      flex: 0 0 280px;
+      background: var(--dark);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 22px 18px;
+      scroll-snap-align: start;
+      position: relative;
+    }
+    .testi-stars { color: var(--gold); font-size: 16px; margin-bottom: 10px; letter-spacing: 2px; }
+    .testi-text {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--blush);
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+    .testi-text::before { content: '\201C'; color: var(--rose); font-size: 20px; font-style: normal; }
+    .testi-text::after  { content: '\201D'; color: var(--rose); font-size: 20px; font-style: normal; }
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .testi-avatar {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--rose), var(--mocha));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .testi-name  { font-size: 13px; font-weight: 600; color: var(--cream); }
+    .testi-loc   { font-size: 11px; color: var(--blush); opacity: 0.6; }
+    .testi-badge {
+      position: absolute;
+      top: 18px; right: 18px;
+      background: rgba(37,211,102,0.15);
+      border: 1px solid rgba(37,211,102,0.3);
+      color: #25D366;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 50px;
+    }
+
+    /* ===== ACTION / FINAL CTA ===== */
+    #action {
+      background: linear-gradient(160deg, var(--espresso) 0%, #2a1810 100%);
+      text-align: center;
+      padding-bottom: 120px;
+      position: relative;
+      overflow: hidden;
+    }
+    #action::before, #action::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+    }
+    #action::before {
+      width: 250px; height: 250px;
+      top: -80px; left: -80px;
+      background: radial-gradient(circle, rgba(201,133,106,0.12) 0%, transparent 70%);
+    }
+    #action::after {
+      width: 200px; height: 200px;
+      bottom: 80px; right: -60px;
+      background: radial-gradient(circle, rgba(212,165,116,0.10) 0%, transparent 70%);
+    }
+    .action-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      line-height: 1.25;
+      color: var(--cream);
+      margin-bottom: 14px;
+    }
+    .action-title em { color: var(--rose); font-style: italic; }
+    .action-body {
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--blush);
+      margin-bottom: 36px;
+    }
+    .action-cta-stack { display: flex; flex-direction: column; gap: 14px; }
+    .btn-shopee {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 17px 20px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--shopee-org), #f07040);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      box-shadow: 0 8px 28px rgba(238,77,45,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      z-index: 1;
+    }
+    .btn-shopee:active { transform: scale(0.97); box-shadow: 0 4px 14px rgba(238,77,45,0.3); }
+    .btn-wa-big {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 17px 20px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--wa-green), #1db954);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      box-shadow: 0 8px 28px rgba(37,211,102,0.28);
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      z-index: 1;
+    }
+    .btn-wa-big:active { transform: scale(0.97); box-shadow: 0 4px 14px rgba(37,211,102,0.25); }
+    .btn-icon { font-size: 22px; }
+    .action-guarantee {
+      margin-top: 22px;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .guarantee-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11.5px;
+      color: var(--blush);
+      opacity: 0.75;
+    }
+    .guarantee-item span:first-child { color: var(--gold); font-size: 14px; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--espresso);
+      text-align: center;
+      padding: 24px 20px 100px;
+      border-top: 1px solid var(--border);
+    }
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--cream);
+      margin-bottom: 6px;
+    }
+    .footer-tagline { font-size: 12px; color: var(--blush); opacity: 0.6; margin-bottom: 14px; }
+    .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .footer-links a {
+      font-size: 12px;
+      color: var(--rose);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .footer-copy {
+      margin-top: 16px;
+      font-size: 11px;
+      color: var(--blush);
+      opacity: 0.4;
+    }
+
+    /* ===== SCROLL ANIMATION ===== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== PULSE ANIMATION ===== */
+    @keyframes pulse-ring {
+      0%   { box-shadow: 0 0 0 0 rgba(238,77,45,0.4); }
+      70%  { box-shadow: 0 0 0 12px rgba(238,77,45,0); }
+      100% { box-shadow: 0 0 0 0 rgba(238,77,45,0); }
+    }
+    .pulse { animation: pulse-ring 2s ease-out infinite; }
+
+    /* ===== SCROLL PROGRESS BAR ===== */
+    #scroll-progress {
+      position: fixed;
+      top: 0; left: 0;
+      width: 0%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--rose), var(--gold), var(--rose));
+      background-size: 200% auto;
+      animation: shimmer-bar 2s linear infinite;
+      z-index: 9999;
+      transition: width 0.1s linear;
+      border-radius: 0 2px 2px 0;
+    }
+    @keyframes shimmer-bar {
+      0%   { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+
+    /* ===== LIGHTBOX ===== */
+    #lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 10000;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox img {
+      max-width: 100%;
+      max-height: 80svh;
+      border-radius: 16px;
+      object-fit: contain;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+      animation: lb-zoom-in 0.25s ease;
+    }
+    @keyframes lb-zoom-in {
+      from { transform: scale(0.85); opacity: 0; }
+      to   { transform: scale(1);    opacity: 1; }
+    }
+    #lightbox-close {
+      position: absolute;
+      top: 20px; right: 20px;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      font-size: 22px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      backdrop-filter: blur(6px);
+    }
+    #lightbox-caption {
+      margin-top: 16px;
+      color: var(--blush);
+      font-size: 13px;
+      text-align: center;
+    }
+    #lightbox-nav {
+      display: flex;
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .lb-nav-btn {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: rgba(201,133,106,0.2);
+      border: 1px solid var(--border);
+      color: var(--cream);
+      font-size: 20px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
+    }
+    .lb-nav-btn:active { background: rgba(201,133,106,0.4); }
+
+    /* ===== TOAST NOTIFICATION ===== */
+    #toast {
+      position: fixed;
+      bottom: 90px; left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--rose);
+      color: var(--cream);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 12px 18px;
+      border-radius: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 9998;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      backdrop-filter: blur(8px);
+      max-width: calc(100% - 40px);
+      white-space: normal;
+      text-align: center;
+    }
+    #toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* ===== BACK TO TOP ===== */
+    #back-top {
+      position: fixed;
+      bottom: 90px; right: 16px;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--rose);
+      font-size: 18px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+      z-index: 990;
+      opacity: 0;
+      transform: scale(0.7);
+      transition: opacity 0.3s, transform 0.3s;
+      backdrop-filter: blur(6px);
+    }
+    #back-top.show { opacity: 1; transform: scale(1); }
+    #back-top:active { transform: scale(0.9); }
+
+    /* ===== TESTIMONIAL DOTS ===== */
+    .testi-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .testi-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--border);
+      border: 1px solid var(--rose);
+      cursor: pointer;
+      transition: background 0.25s, transform 0.25s;
+    }
+    .testi-dot.active {
+      background: var(--rose);
+      transform: scale(1.3);
+    }
+
+    /* ===== BENEFIT ACCORDION ===== */
+    .benefit-item {
+      cursor: pointer;
+      user-select: none;
+    }
+    .benefit-item .benefit-desc {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, opacity 0.35s ease;
+      opacity: 0;
+      margin-top: 0;
+    }
+    .benefit-item.open .benefit-desc {
+      max-height: 80px;
+      opacity: 0.8;
+      margin-top: 6px;
+    }
+    .benefit-toggle {
+      margin-left: auto;
+      font-size: 18px;
+      color: var(--rose);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+      align-self: center;
+      padding-left: 8px;
+    }
+    .benefit-item.open .benefit-toggle { transform: rotate(45deg); }
+
+    /* ===== PRICE ROW TAP HIGHLIGHT ===== */
+    .price-row {
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s, transform 0.15s;
+    }
+    .price-row.selected {
+      border-color: var(--rose) !important;
+      background: rgba(201,133,106,0.12);
+      transform: scale(1.015);
+    }
+
+    /* ===== RIPPLE EFFECT ===== */
+    .ripple-host { position: relative; overflow: hidden; }
+    @keyframes ripple-anim {
+      from { transform: scale(0); opacity: 0.5; }
+      to   { transform: scale(4); opacity: 0; }
+    }
+    .ripple-wave {
+      position: absolute;
+      border-radius: 50%;
+      width: 60px; height: 60px;
+      background: rgba(255,255,255,0.3);
+      margin-top: -30px; margin-left: -30px;
+      pointer-events: none;
+      animation: ripple-anim 0.6s ease-out forwards;
+    }
+
+    /* ===== PRODUCT CARD clickable cursor ===== */
+    .product-img-wrap { cursor: zoom-in; }
+
+    /* ===== WHO CARD hover ===== */
+    .who-card {
+      transition: transform 0.25s, border-color 0.25s;
+      cursor: default;
+    }
+    .who-card:active { transform: scale(0.97); border-color: var(--rose); }
+
+    /* ===== FACILITY CARD hover ===== */
+    .facility-card {
+      transition: transform 0.25s, border-color 0.25s;
+      cursor: default;
+    }
+    .facility-card:active { transform: scale(0.97); }
+
+    /* ===== FLASH SALE COUNTDOWN ===== */
+    .countdown-bar {
+      margin: 16px 20px 0;
+      background: linear-gradient(135deg, rgba(201,133,106,0.18), rgba(212,165,116,0.1));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px 16px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .countdown-bar::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%; width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+      animation: sweep 3s infinite;
+    }
+    @keyframes sweep {
+      0% { left: -100%; }
+      50%, 100% { left: 100%; }
+    }
+    .countdown-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #ffb088;
+      margin-bottom: 8px;
+    }
+    .timer-units {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .timer-box {
+      background: #150b07;
+      border: 1px solid rgba(201,133,106,0.35);
+      border-radius: 10px;
+      padding: 6px 10px;
+      min-width: 48px;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+    }
+    .timer-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1.1;
+    }
+    .timer-lbl {
+      font-size: 9px;
+      color: var(--blush);
+      opacity: 0.75;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .timer-colon {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--rose);
+      animation: blink 1s infinite;
+    }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
+
+    /* ===== VOUCHER BANNER ===== */
+    .voucher-card {
+      margin: 16px 0 14px;
+      background: radial-gradient(circle at top right, rgba(212,165,116,0.15), rgba(42,24,16,0.95));
+      border: 1px dashed var(--rose);
+      border-radius: 16px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      position: relative;
+    }
+    .voucher-left { flex: 1; }
+    .voucher-tag {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .voucher-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--cream);
+      margin: 2px 0;
+    }
+    .voucher-desc {
+      font-size: 11px;
+      color: var(--blush);
+      opacity: 0.85;
+    }
+    .voucher-copy-btn {
+      background: linear-gradient(135deg, var(--rose), var(--gold));
+      color: #1a0f0a;
+      border: none;
+      padding: 9px 13px;
+      border-radius: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(201,133,106,0.3);
+      transition: transform 0.15s, filter 0.15s;
+    }
+    .voucher-copy-btn:active { transform: scale(0.94); }
+
+    /* ===== PRODUCT FILTER CHIPS ===== */
+    .filter-chips {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 6px 0 14px;
+      scrollbar-width: none;
+    }
+    .filter-chips::-webkit-scrollbar { display: none; }
+    .filter-chip {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      color: var(--blush);
+      padding: 7px 14px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      font-family: 'Poppins', sans-serif;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .filter-chip.active {
+      background: var(--rose);
+      color: #fff;
+      border-color: var(--rose);
+      box-shadow: 0 4px 12px rgba(201,133,106,0.35);
+    }
+
+    /* ===== WISHLIST BUTTON ===== */
+    .fav-btn {
+      position: absolute;
+      top: 10px; right: 10px;
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      background: rgba(26,15,10,0.7);
+      border: 1px solid rgba(255,255,255,0.25);
+      backdrop-filter: blur(6px);
+      color: #fff;
+      font-size: 16px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      z-index: 5;
+      transition: transform 0.2s, background 0.2s, color 0.2s;
+    }
+    .fav-btn:active { transform: scale(1.3); }
+    .fav-btn.active {
+      background: rgba(238,77,45,0.9);
+      color: #fff;
+      border-color: #ee4d2d;
+      animation: heart-pop 0.3s ease;
+    }
+    @keyframes heart-pop {
+      0% { transform: scale(0.8); }
+      50% { transform: scale(1.35); }
+      100% { transform: scale(1); }
+    }
+
+    /* ===== PRODUCT CARD ACTIONS ===== */
+    .product-btn-row {
+      display: flex;
+      gap: 6px;
+      margin-top: 10px;
+    }
+    .btn-detail {
+      flex: 1;
+      padding: 9px 8px;
+      border-radius: 8px;
+      background: rgba(201,133,106,0.15);
+      border: 1px solid var(--border);
+      color: var(--cream);
+      font-size: 11px;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      transition: background 0.2s;
+    }
+    .btn-detail:active { background: rgba(201,133,106,0.3); }
+    .product-card {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .product-card.hidden {
+      display: none;
+    }
+
+    /* ===== PRODUCT DETAIL MODAL ===== */
+    #detail-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(8px);
+      z-index: 10001;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    #detail-modal.open { display: flex; }
+    .detail-sheet {
+      background: #23130d;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      border-radius: 24px 24px 0 0;
+      width: 100%;
+      max-width: 480px;
+      max-height: 88svh;
+      overflow-y: auto;
+      padding: 24px 20px 32px;
+      box-shadow: 0 -10px 40px rgba(0,0,0,0.7);
+      animation: slide-up 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+    @keyframes slide-up {
+      from { transform: translateY(100%); }
+      to   { transform: translateY(0); }
+    }
+    .sheet-handle {
+      width: 40px; height: 4px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 4px;
+      margin: 0 auto 16px;
+    }
+    .detail-close {
+      position: absolute;
+      top: 18px; right: 18px;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      border: none;
+      color: #fff;
+      font-size: 18px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+    }
+    .detail-img-wrap {
+      width: 100%;
+      height: 240px;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+      position: relative;
+      cursor: zoom-in;
+    }
+    .detail-img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .detail-badges {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .detail-badge-pill {
+      font-size: 10px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 50px;
+      background: rgba(201,133,106,0.18);
+      border: 1px solid var(--border);
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .detail-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--cream);
+      margin-bottom: 4px;
+    }
+    .detail-price {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--rose);
+      margin-bottom: 14px;
+    }
+    .detail-specs-grid {
+      background: rgba(0,0,0,0.25);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 14px;
+      margin-bottom: 16px;
+      font-size: 12px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 14px;
+    }
+    .spec-item .spec-label {
+      font-size: 10px;
+      color: var(--blush);
+      opacity: 0.7;
+      text-transform: uppercase;
+    }
+    .spec-item .spec-val {
+      font-weight: 600;
+      color: var(--cream);
+      margin-top: 2px;
+    }
+    .detail-cta-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    /* ===== FAQ ACCORDION ===== */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.25s;
+    }
+    .faq-item.open {
+      border-color: var(--rose);
+    }
+    .faq-q {
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--cream);
+      user-select: none;
+      gap: 12px;
+    }
+    .faq-icon-chev {
+      font-size: 14px;
+      color: var(--rose);
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+    .faq-item.open .faq-icon-chev {
+      transform: rotate(180deg);
+    }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--blush);
+      opacity: 0.9;
+      padding: 0 18px;
+    }
+    .faq-item.open .faq-a {
+      max-height: 220px;
+      padding: 0 18px 16px;
+    }
+
+    /* ===== LIVE SOCIAL PROOF TICKER ===== */
+    #social-ticker {
+      position: fixed;
+      bottom: 74px;
+      left: 16px;
+      z-index: 995;
+      background: rgba(35, 19, 13, 0.94);
+      border: 1px solid var(--border);
+      border-left: 3px solid #25D366;
+      border-radius: 14px;
+      padding: 10px 14px 10px 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      backdrop-filter: blur(10px);
+      max-width: 320px;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    #social-ticker.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .ticker-icon {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: rgba(37,211,102,0.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .ticker-content { font-size: 11px; line-height: 1.4; color: var(--cream); }
+    .ticker-time { font-size: 10px; color: var(--blush); opacity: 0.65; margin-top: 2px; }
+    .ticker-close {
+      background: none; border: none; color: var(--blush);
+      font-size: 14px; cursor: pointer; opacity: 0.6; padding: 2px;
+      margin-left: 4px;
+    }
+
+    /* ===== CONFETTI CANVAS ===== */
+    #confetti-canvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 99999;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- FLOATING CTA BAR -->
+<!-- ============================================================ -->
+<div class="float-cta" role="navigation" aria-label="Quick Order">
+  <a href="https://wa.me/6281234567890?text=Halo%20Softie%20Goods!%20Saya%20mau%20tanya%20tentang%20koleksi%20tas%20vintage%20%F0%9F%98%8A" class="btn-wa" id="float-wa" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Chat WA
+  </a>
+  <a href="https://shopee.co.id/softiegoods" class="btn-sp" id="float-shopee" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a4 4 0 014 4h2a2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h2a4 4 0 014-4zm0 2a2 2 0 00-2 2h4a2 2 0 00-2-2zm-1 8v1h2v-1h2l.5 5h-7l.5-5h2zm1 2a1.5 1.5 0 100 3 1.5 1.5 0 000-3z"/></svg>
+    Beli di Shopee
+  </a>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 1: HERO — ATTENTION -->
+<!-- ============================================================ -->
+<section id="hero" aria-label="Hero Section">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-badge">&#10022; Vintage Thrift</div>
+
+  <div class="hero-collage" aria-hidden="true">
+    <img src="gamabr-produk/WhatsApp Image 2026-10-19 at 21.26.13.jpeg"
+         alt="Koleksi tas vintage Softie Goods" class="img-main" />
+    <img src="gamabr-produk/WhatsApp Image 2026-10-19 at 21.26.14 (1).jpeg"
+         alt="Tas vintage aesthetic" class="img-top-right" />
+    <img src="gamabr-produk/WhatsApp Image 2026-10-19 at 21.26.14.jpeg"
+         alt="Tas thrift pilihan" class="img-bot-right" />
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-brand">&#10022; Softie Goods &#10022;</p>
+    <h1 class="hero-title">
+      Tampil <em>Unik</em><br/>
+      dengan Tas<br/>
+      Vintage Thrift
+    </h1>
+    <p class="hero-subtitle">
+      Koleksi tas vintage preloved pilihan &#8212; klasik, timeless,
+      dan stylish. Cocok untuk sehari-hari, mulai dari casual
+      hingga semi-formal. &#127807;
+    </p>
+    <div class="hero-cta-row">
+      <a href="https://shopee.co.id/softiegoods" class="btn-primary pulse" id="hero-shopee-btn" target="_blank" rel="noopener">
+        &#128717; Belanja Sekarang
+      </a>
+      <a href="https://wa.me/6281234567890?text=Halo%20kak%20mau%20tanya%20koleksi%20tas%20Softie%20Goods" class="btn-secondary" id="hero-wa-btn" target="_blank" rel="noopener">
+        &#128172; Tanya Dulu
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">500+</div>
+        <div class="hero-stat-label">Pembeli Puas</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">5</div>
+        <div class="hero-stat-label">Model Tersedia</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">4.9&#9733;</div>
+        <div class="hero-stat-label">Rating Toko</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span>&#10022; VINTAGE THRIFT</span><span class="dot">&middot;</span>
+    <span>UNIK &amp; TIMELESS</span><span class="dot">&middot;</span>
+    <span>AESTHETIC STYLE</span><span class="dot">&middot;</span>
+    <span>PRELOVED FASHION</span><span class="dot">&middot;</span>
+    <span>SOFTIE GOODS</span><span class="dot">&middot;</span>
+    <span>SAFE PACKAGING</span><span class="dot">&middot;</span>
+    <span>&#10022; VINTAGE THRIFT</span><span class="dot">&middot;</span>
+    <span>UNIK &amp; TIMELESS</span><span class="dot">&middot;</span>
+    <span>AESTHETIC STYLE</span><span class="dot">&middot;</span>
+    <span>PRELOVED FASHION</span><span class="dot">&middot;</span>
+    <span>SOFTIE GOODS</span><span class="dot">&middot;</span>
+    <span>SAFE PACKAGING</span><span class="dot">&middot;</span>
+  </div>
+</div>
+
+<!-- FLASH SALE COUNTDOWN URGENCY -->
+<div class="countdown-bar fade-up" id="flash-sale-bar">
+  <div class="countdown-badge">&#9889; EARLY DROP • PROMO BERAKHIR DALAM:</div>
+  <div class="timer-units">
+    <div class="timer-box">
+      <div class="timer-num" id="timer-h">02</div>
+      <div class="timer-lbl">Jam</div>
+    </div>
+    <div class="timer-colon">:</div>
+    <div class="timer-box">
+      <div class="timer-num" id="timer-m">47</div>
+      <div class="timer-lbl">Menit</div>
+    </div>
+    <div class="timer-colon">:</div>
+    <div class="timer-box">
+      <div class="timer-num" id="timer-s">28</div>
+      <div class="timer-lbl">Detik</div>
+    </div>
+  </div>
+  <div style="font-size:11px;color:var(--blush);opacity:0.85;margin-top:8px;">
+    &#128293; <strong>Hanya 1 Pcs Tiap Model!</strong> Siapa cepat, dia dapat.
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 2: INTEREST — Benefit & Keunggulan -->
+<!-- ============================================================ -->
+<section id="interest" aria-labelledby="interest-heading">
+  <div class="fade-up">
+    <p class="section-label">Kenapa Softie Goods?</p>
+    <h2 class="section-title" id="interest-heading">
+      Tas yang Bicara<br/><span>Tentang Kamu</span>
+    </h2>
+    <div class="divider"></div>
+    <p class="section-body">
+      SOFTIE GOODS adalah toko thrift yang menghadirkan berbagai pilihan tas
+      vintage dengan desain unik, timeless, dan tetap stylish. Setiap produk
+      dipilih dengan teliti agar berkualitas dan layak pakai &#8212; dengan harga
+      yang bersahabat di kantong.
+    </p>
+  </div>
+  <div class="benefit-list fade-up">
+    <div class="benefit-item">
+      <div class="benefit-icon">&#127912;</div>
+      <div>
+        <div class="benefit-title">Desain Vintage Unik &amp; Timeless</div>
+        <div class="benefit-desc">Tampilan klasik yang tetap menarik dan mudah dipadukan dengan berbagai gaya outfit.</div>
+      </div>
+    </div>
+    <div class="benefit-item">
+      <div class="benefit-icon">&#128449;</div>
+      <div>
+        <div class="benefit-title">Kapasitas Luas</div>
+        <div class="benefit-desc">Dapat menampung berbagai kebutuhan sehari-hari sesuai ukuran tas yang dipilih.</div>
+      </div>
+    </div>
+    <div class="benefit-item">
+      <div class="benefit-icon">&#129513;</div>
+      <div>
+        <div class="benefit-title">Kompartemen Penyimpanan</div>
+        <div class="benefit-desc">Beberapa bagian penyimpanan agar barang bawaan lebih terorganisasi dan rapi.</div>
+      </div>
+    </div>
+    <div class="benefit-item">
+      <div class="benefit-icon">&#127807;</div>
+      <div>
+        <div class="benefit-title">Sustainable &amp; Eco-Friendly</div>
+        <div class="benefit-desc">Mendukung gaya hidup sustainable melalui penggunaan kembali produk preloved berkualitas.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 3: PRODUK GALLERY -->
+<!-- ============================================================ -->
+<section id="products" aria-labelledby="products-heading">
+  <div class="fade-up">
+    <p class="section-label">Koleksi Pilihan</p>
+    <h2 class="section-title" id="products-heading">
+      Temukan Tas<br/><span>Favorit Kamu</span>
+    </h2>
+    <div class="divider"></div>
+
+    <!-- VOUCHER CLAIM BOX -->
+    <div class="voucher-card" id="voucher-card">
+      <div class="voucher-left">
+        <div class="voucher-tag">&#127873; VOUCHER KHUSUS HARI INI</div>
+        <div class="voucher-title">Diskon Ekstra Rp10.000</div>
+        <div class="voucher-desc">Kode: <strong style="color:var(--gold);letter-spacing:1px;" id="code-text">SOFTIE10K</strong> &bull; Min. belanja Rp35k</div>
+      </div>
+      <button class="voucher-copy-btn" id="btn-claim-voucher" aria-label="Klaim voucher">
+        <span>&#9986; Salin Kode</span>
+      </button>
+    </div>
+
+    <!-- FILTER CHIPS -->
+    <div class="filter-chips" role="tablist" aria-label="Filter kategori tas">
+      <button class="filter-chip active" data-filter="all" role="tab" aria-selected="true">&#10022; Semua (5)</button>
+      <button class="filter-chip" data-filter="budget" role="tab" aria-selected="false">&#127991; &le; Rp45k</button>
+      <button class="filter-chip" data-filter="premium" role="tab" aria-selected="false">&#10024; Premium Look</button>
+      <button class="filter-chip" data-filter="fav" role="tab" aria-selected="false">&#10084;&#65039; Tersimpan (<span id="fav-count">0</span>)</button>
+    </div>
+  </div>
+
+  <div class="product-scroll fade-up" role="list" aria-label="Koleksi produk" id="product-list">
+    <!-- PRODUCT 1 -->
+    <div class="product-card" role="listitem" data-id="1" data-cat="budget best" data-price="40000" data-name="Cocoa Sunday" data-cond="9.5/10 Like New &bull; Deep Cleaned" data-space="Muat HP 6.7 inch, dompet lipat, kunci, lip balm" data-img="gamabr-produk/WhatsApp Image 2026-10-19 at 21.26.13.jpeg">
+      <div class="product-img-wrap">
+        <img src="gamabr-produk/WhatsApp Image 2026-10-19 at 21.26.13.jpeg" alt="Cocoa Sunday tas vintage mocha" loading="lazy" />
+        <div class="product-badge">Best Seller</div>
+        <button class="fav-btn" data-fav-id="1" aria-label="Simpan Cocoa Sunday ke favorit">&#9825;</button>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Cocoa Sunday</div>
+        <div class="product-price">Rp40.000</div>
+        <div class="product-btn-row">
+          <button class="btn-detail" data-open-detail="1">&#128269; Detail</button>
+          <a href="https://shopee.co.id/softiegoods" class="product-cta" id="prod-1-btn" target="_blank" rel="noopener">Shopee &#8594;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="product-card" role="listitem" data-id="2" data-cat="budget best" data-price="45000" data-name="Pink Petal" data-cond="9.5/10 Mulus Bersih &bull; Wangi" data-space="Muat HP, dompet mini, bedak, lipstick, cermin" data-img="gamabr-produk/WhatsApp Image 2026-10-19 at 21.26.14 (1).jpeg">
+      <div class="product-img-wrap">
+        <img src="gamabr-produk/WhatsApp Image 2026-10-19 at 21.26.14 (1).jpeg" alt="Pink Petal tas vintage pink aesthetic" loading="lazy" />
+        <div class="product-badge">Fav &#128149;</div>
+        <button class="fav-btn" data-fav-id="2" aria-label="Simpan Pink Petal ke favorit">&#9825;</button>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Pink Petal</div>
+        <div class="product-price">Rp45.000</div>
+        <div class="product-btn-row">
+          <button class="btn-detail" data-open-detail="2">&#128269; Detail</button>
+          <a href="https://shopee.co.id/softiegoods" class="product-cta" id="prod-2-btn" target="_blank" rel="noopener">Shopee &#8594;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="product-card" role="listitem" data-id="3" data-cat="premium" data-price="55000" data-name="Rainbow Monogram" data-cond="9.6/10 Sangat Terawat &bull; Rare Item" data-space="Kompartemen utama luas + saku resleting dalam" data-img="gamabr-produk/WhatsApp Image 2026-10-19 at 21.26.14 (2).jpeg">
+      <div class="product-img-wrap">
+        <img src="gamabr-produk/WhatsApp Image 2026-10-19 at 21.26.14 (2).jpeg" alt="Rainbow Monogram tas vintage colorful" loading="lazy" />
+        <div class="product-badge">New</div>
+        <button class="fav-btn" data-fav-id="3" aria-label="Simpan Rainbow Monogram ke favorit">&#9825;</button>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Rainbow Monogram</div>
+        <div class="product-price">Rp55.000</div>
+        <div class="product-btn-row">
+          <button class="btn-detail" data-open-detail="3">&#128269; Detail</button>
+          <a href="https://shopee.co.id/softiegoods" class="product-cta" id="prod-3-btn" target="_blank" rel="noopener">Shopee &#8594;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT 4 -->
+    <div class="product-card" role="listitem" data-id="4" data-cat="budget" data-price="35000" data-name="Cloudy White" data-cond="9.4/10 Bersih Putih Cerah &bull; No Stain" data-space="Muat daily essentials, HP, charger mini, dompet" data-img="gamabr-produk/WhatsApp Image 2026-10-19 at 21.26.14.jpeg">
+      <div class="product-img-wrap">
+        <img src="gamabr-produk/WhatsApp Image 2026-10-19 at 21.26.14.jpeg" alt="Cloudy White tas vintage putih" loading="lazy" />
+        <button class="fav-btn" data-fav-id="4" aria-label="Simpan Cloudy White ke favorit">&#9825;</button>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Cloudy White</div>
+        <div class="product-price">Rp35.000</div>
+        <div class="product-btn-row">
+          <button class="btn-detail" data-open-detail="4">&#128269; Detail</button>
+          <a href="https://shopee.co.id/softiegoods" class="product-cta" id="prod-4-btn" target="_blank" rel="noopener">Shopee &#8594;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT 5 -->
+    <div class="product-card" role="listitem" data-id="5" data-cat="premium" data-price="55000" data-name="Rosy Argyle" data-cond="9.7/10 Like Brand New &bull; Elegan" data-space="Struktur kokoh, muat clutch, HP, makeup lengkap" data-img="gamabr-produk/WhatsApp Image 2026-10-19 at 21.26.15.jpeg">
+      <div class="product-img-wrap">
+        <img src="gamabr-produk/WhatsApp Image 2026-10-19 at 21.26.15.jpeg" alt="Rosy Argyle tas vintage elegan" loading="lazy" />
+        <div class="product-badge">Elegant &#10024;</div>
+        <button class="fav-btn" data-fav-id="5" aria-label="Simpan Rosy Argyle ke favorit">&#9825;</button>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Rosy Argyle</div>
+        <div class="product-price">Rp55.000</div>
+        <div class="product-btn-row">
+          <button class="btn-detail" data-open-detail="5">&#128269; Detail</button>
+          <a href="https://shopee.co.id/softiegoods" class="product-cta" id="prod-5-btn" target="_blank" rel="noopener">Shopee &#8594;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 4: FOR WHO -->
+<!-- ============================================================ -->
+<section id="forwho" aria-labelledby="forwho-heading">
+  <div class="fade-up">
+    <p class="section-label">Cocok untuk Siapa?</p>
+    <h2 class="section-title" id="forwho-heading">
+      Untuk <span>Semua</span><br/>yang Ingin Tampil Beda
+    </h2>
+    <div class="divider"></div>
+  </div>
+  <div class="who-grid fade-up">
+    <div class="who-card">
+      <div class="who-emoji">&#127891;</div>
+      <div class="who-title">Mahasiswa</div>
+      <div class="who-desc">Tampil stylish ke kampus tanpa harus keluar banyak budget.</div>
+    </div>
+    <div class="who-card">
+      <div class="who-emoji">&#128249;</div>
+      <div class="who-title">Pecinta Fashion</div>
+      <div class="who-desc">Lengkapi outfit dengan sentuhan klasik yang timeless.</div>
+    </div>
+    <div class="who-card">
+      <div class="who-emoji">&#127800;</div>
+      <div class="who-title">Anak Muda Kasual</div>
+      <div class="who-desc">Mudah dipadukan dengan berbagai outfit aktivitas sehari-hari.</div>
+    </div>
+    <div class="who-card">
+      <div class="who-emoji">&#128188;</div>
+      <div class="who-title">Pekerja</div>
+      <div class="who-desc">Membawa kebutuhan pribadi dengan gaya yang tetap profesional.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 5: DESIRE — Mengapa Harus Sekarang -->
+<!-- ============================================================ -->
+<section id="desire" aria-labelledby="desire-heading">
+  <div class="fade-up">
+    <p class="section-label">Mengapa Softie Goods?</p>
+    <h2 class="section-title" id="desire-heading">
+      Bukan Sekadar Tas,<br/>Ini Tentang <span>Identitasmu</span>
+    </h2>
+    <div class="divider" style="margin:16px auto;"></div>
+    <blockquote class="desire-quote">
+      &#8220;SOFTIE GOODS bukan sekadar tempat menemukan tas yang fashionable &#8212;
+      tapi juga tempat menemukan pelengkap gaya yang sesuai dengan
+      kepribadianmu.&#8221;
+    </blockquote>
+    <p class="section-body">
+      Dengan pilihan model yang beragam dan harga yang ramah di kantong,
+      Softie Goods hadir untuk membantu kamu tampil lebih percaya diri
+      tanpa harus mengeluarkan banyak biaya. Temukan tas sesuai keinginan
+      dan jadikan setiap aktivitas terasa lebih istimewa bersama
+      <strong style="color:var(--rose);">SOFTIE GOODS</strong>. &#127864;
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 6: FACILITIES -->
+<!-- ============================================================ -->
+<section id="facilities" aria-labelledby="facilities-heading">
+  <div class="fade-up">
+    <p class="section-label">Yang Kamu Dapatkan</p>
+    <h2 class="section-title" id="facilities-heading">
+      Belanja <span>Aman</span><br/>dan Nyaman
+    </h2>
+    <div class="divider"></div>
+  </div>
+  <div class="facility-grid fade-up">
+    <div class="facility-card">
+      <div class="facility-icon">&#128230;</div>
+      <div class="facility-title">Safe Packaging</div>
+      <div class="facility-desc">Tas dikemas rapi agar aman selama proses pengiriman.</div>
+    </div>
+    <div class="facility-card">
+      <div class="facility-icon">&#128269;</div>
+      <div class="facility-title">Info Produk Lengkap</div>
+      <div class="facility-desc">Detail harga, kondisi, dan spesifikasi sebelum beli.</div>
+    </div>
+    <div class="facility-card">
+      <div class="facility-icon">&#128241;</div>
+      <div class="facility-title">Easy Ordering</div>
+      <div class="facility-desc">Pemesanan praktis via Shopee atau langsung WhatsApp.</div>
+    </div>
+    <div class="facility-card">
+      <div class="facility-icon">&#128172;</div>
+      <div class="facility-title">Friendly CS</div>
+      <div class="facility-desc">Siap membantu menjawab pertanyaan seputar produk &amp; pesanan.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 7: PRICING -->
+<!-- ============================================================ -->
+<section id="pricing" aria-labelledby="pricing-heading">
+  <div class="fade-up">
+    <p class="section-label">Harga Koleksi</p>
+    <h2 class="section-title" id="pricing-heading">
+      Harga <span>Bersahabat</span>,<br/>Kualitas Terpilih
+    </h2>
+    <div class="divider"></div>
+  </div>
+  <div class="price-list fade-up">
+    <div class="price-row">
+      <div class="price-name">
+        <div class="price-dot" style="background:#f0f0f0;border:1px solid #ccc;"></div>
+        Cloudy White
+      </div>
+      <div class="price-tag">Rp35.000</div>
+    </div>
+    <div class="price-row">
+      <div class="price-name">
+        <div class="price-dot" style="background:#6B3E26;"></div>
+        Cocoa Sunday
+      </div>
+      <div class="price-tag">Rp40.000</div>
+    </div>
+    <div class="price-row">
+      <div class="price-name">
+        <div class="price-dot" style="background:#f4a7b9;"></div>
+        Pink Petal
+      </div>
+      <div class="price-tag">Rp45.000</div>
+    </div>
+    <div class="price-row">
+      <div class="price-name">
+        <div class="price-dot" style="background:linear-gradient(135deg,#f06,#88f);"></div>
+        Rainbow Monogram
+      </div>
+      <div class="price-tag">Rp55.000</div>
+    </div>
+    <div class="price-row">
+      <div class="price-name">
+        <div class="price-dot" style="background:#c9856a;"></div>
+        Rosy Argyle
+      </div>
+      <div class="price-tag">Rp55.000</div>
+    </div>
+  </div>
+  <p class="price-note">&#9733; Harga belum termasuk ongkos kirim. Stok terbatas!</p>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 7.5: FAQ ACCORDION -->
+<!-- ============================================================ -->
+<section id="faq" aria-labelledby="faq-heading">
+  <div class="fade-up">
+    <p class="section-label">Pertanyaan Umum</p>
+    <h2 class="section-title" id="faq-heading">
+      FAQ &bull; <span>Seputar Tas</span><br/>Softie Goods
+    </h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="faq-list fade-up">
+    <!-- FAQ 1 -->
+    <div class="faq-item open">
+      <div class="faq-q" role="button" aria-expanded="true">
+        <span>Apakah tas sudah dicuci dan siap pakai?</span>
+        <span class="faq-icon-chev">&#9662;</span>
+      </div>
+      <div class="faq-a">
+        <strong>100% Sudah!</strong> Setiap tas vintage thrift di SOFTIE GOODS melewati proses <em>deep cleaning</em>, sterilisasi uap (steam sanitize), serta conditioning bahan. Dijamin wangi, bersih, dan higienis siap langsung dipakai OOTD!
+      </div>
+    </div>
+
+    <!-- FAQ 2 -->
+    <div class="faq-item">
+      <div class="faq-q" role="button" aria-expanded="false">
+        <span>Apakah setiap model hanya ada 1 stok?</span>
+        <span class="faq-icon-chev">&#9662;</span>
+      </div>
+      <div class="faq-a">
+        Betul sekali! Keistimewaan utama tas vintage preloved adalah <strong>One of a Kind</strong>. Setiap model hanya tersedia 1 pcs. Siapa cepat dia dapat, dan kecil kemungkinan restock barang yang sama persis.
+      </div>
+    </div>
+
+    <!-- FAQ 3 -->
+    <div class="faq-item">
+      <div class="faq-q" role="button" aria-expanded="false">
+        <span>Lebih baik order via Shopee atau WhatsApp?</span>
+        <span class="faq-icon-chev">&#9662;</span>
+      </div>
+      <div class="faq-a">
+        Sesuai kenyamananmu! Pilih <strong>Shopee</strong> jika ingin menikmati Gratis Ongkir, PayLater, dan bayar di tempat (COD). Pilih <strong>WhatsApp</strong> jika ingin konsultasi langsung, minta video detail tas 360&deg;, atau tanya admin dengan ramah!
+      </div>
+    </div>
+
+    <!-- FAQ 4 -->
+    <div class="faq-item">
+      <div class="faq-q" role="button" aria-expanded="false">
+        <span>Bagaimana keamanan pengemasan (packing)?</span>
+        <span class="faq-icon-chev">&#9662;</span>
+      </div>
+      <div class="faq-a">
+        Kami menggunakan <strong>Safe Packaging</strong>: isian gumpalan kertas pelindung agar bentuk tas tidak penyok, double bubble wrap tebal, dan kardus pelindung. Paket dikirim maksimal 1x24 jam dari Yogyakarta.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 8: TESTIMONIALS -->
+<!-- ============================================================ -->
+<section id="testimonials" aria-labelledby="testi-heading">
+  <div class="fade-up">
+    <p class="section-label">Kata Mereka</p>
+    <h2 class="section-title" id="testi-heading">
+      <span>500+</span> Pembeli<br/>Sudah Puas &#128149;
+    </h2>
+    <div class="divider"></div>
+  </div>
+  <div class="testi-scroll fade-up" role="list" aria-label="Testimoni pembeli">
+
+    <div class="testi-card" role="listitem">
+      <div class="testi-badge">&#10003; Verified</div>
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testi-text">
+        Kaget banget kualitasnya sebagus ini padahal harganya super terjangkau!
+        Tasnya udah aku pake ke kampus setiap hari dan masih kece banget.
+        Packagingnya juga rapi, ga nyesel beli di sini!
+      </p>
+      <div class="testi-author">
+        <div class="testi-avatar">A</div>
+        <div>
+          <div class="testi-name">Aurel N.</div>
+          <div class="testi-loc">&#128205; Yogyakarta &middot; Pembeli Cloudy White</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card" role="listitem">
+      <div class="testi-badge">&#10003; Verified</div>
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testi-text">
+        Suka banget sama Cocoa Sunday, warna mochanya tuh elegan banget.
+        Udah cocok buat kuliah, ke cafe, even ke kondangan casual juga oke.
+        CS-nya ramah dan responsif, recommended bangeeett!
+      </p>
+      <div class="testi-author">
+        <div class="testi-avatar">R</div>
+        <div>
+          <div class="testi-name">Reva K.</div>
+          <div class="testi-loc">&#128205; Bandung &middot; Pembeli Cocoa Sunday</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card" role="listitem">
+      <div class="testi-badge">&#10003; Verified</div>
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testi-text">
+        Pink Petal-nya lucu parah!! Warnanya persis kayak di foto, kondisinya
+        juga bagus. Untuk harga segitu udah worth it banget, nanti mau repeat
+        order yang Rainbow Monogram. Makasih Softie Goods!
+      </p>
+      <div class="testi-author">
+        <div class="testi-avatar">S</div>
+        <div>
+          <div class="testi-name">Salsa F.</div>
+          <div class="testi-loc">&#128205; Jakarta &middot; Pembeli Pink Petal</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card" role="listitem">
+      <div class="testi-badge">&#10003; Verified</div>
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testi-text">
+        Sebagai pecinta fashion vintage, ini temuan terbaik! Tasnya beneran
+        unik dan ga pasaran. Udah dapat banyak compliment pas dipakai
+        ngantor. Harga murah tapi ga murahan, highly recommended!
+      </p>
+      <div class="testi-author">
+        <div class="testi-avatar">D</div>
+        <div>
+          <div class="testi-name">Dinda M.</div>
+          <div class="testi-loc">&#128205; Surabaya &middot; Pembeli Rosy Argyle</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card" role="listitem">
+      <div class="testi-badge">&#10003; Verified</div>
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testi-text">
+        Awalnya ragu beli preloved, tapi setelah liat koleksi Softie Goods
+        langsung yakin! Kondisinya beneran bagus, bersih, dan seperti baru.
+        Harga mahasiswa tapi kualitas premium. Mau beli lagi pasti!
+      </p>
+      <div class="testi-author">
+        <div class="testi-avatar">N</div>
+        <div>
+          <div class="testi-name">Nadia P.</div>
+          <div class="testi-loc">&#128205; Semarang &middot; Pembeli Rainbow Monogram</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 9: ACTION — Final CTA -->
+<!-- ============================================================ -->
+<section id="action" aria-labelledby="action-heading">
+  <div class="fade-up" style="position:relative;z-index:1;">
+    <p class="section-label" style="display:block;text-align:center;">Tunggu Apa Lagi?</p>
+    <h2 class="action-title" id="action-heading">
+      Dapatkan Tas<br/><em>Vintasemu</em><br/>Sekarang! &#128717;
+    </h2>
+    <p class="action-body">
+      Stok terbatas &#8212; pilihan tas vintage terbaik bisa habis kapan saja!
+      Jangan sampai ketinggalan koleksi favorit kamu. Order sekarang
+      melalui Shopee atau chat langsung via WhatsApp.
+    </p>
+    <div class="action-cta-stack">
+      <a href="https://shopee.co.id/softiegoods" class="btn-shopee" id="action-shopee-btn" target="_blank" rel="noopener">
+        <span class="btn-icon">&#128717;</span>
+        Belanja di Shopee Sekarang
+      </a>
+      <a href="https://wa.me/6281234567890?text=Halo%20kak%20Softie%20Goods!%20Aku%20tertarik%20dengan%20koleksi%20tas%20vintage%20kamu%20%F0%9F%9B%8D%EF%B8%8F%20boleh%20tanya-tanya%20dulu%3F" class="btn-wa-big" id="action-wa-btn" target="_blank" rel="noopener">
+        <span class="btn-icon">&#128172;</span>
+        Chat WhatsApp Admin
+      </a>
+    </div>
+    <div class="action-guarantee">
+      <div class="guarantee-item"><span>&#10003;</span><span>Produk Terseleksi</span></div>
+      <div class="guarantee-item"><span>&#128230;</span><span>Safe Packaging</span></div>
+      <div class="guarantee-item"><span>&#9889;</span><span>Respon Cepat</span></div>
+      <div class="guarantee-item"><span>&#128179;</span><span>Bayar di Shopee</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- FOOTER -->
+<!-- ============================================================ -->
+<footer>
+  <div class="footer-brand">&#10022; Softie Goods &#10022;</div>
+  <p class="footer-tagline">Vintage Thrift &middot; Unik &middot; Timeless &middot; Stylish</p>
+  <div class="footer-links">
+    <a href="https://shopee.co.id/softiegoods" target="_blank" rel="noopener" id="footer-shopee">&#128717; Shopee</a>
+    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" id="footer-wa">&#128172; WhatsApp</a>
+  </div>
+  <p class="footer-copy">&copy; 2026 Softie Goods &middot; All rights reserved</p>
+</footer>
+
+<!-- ============================================================ -->
+<!-- SCROLL PROGRESS BAR -->
+<!-- ============================================================ -->
+<div id="scroll-progress" aria-hidden="true"></div>
+
+<!-- ============================================================ -->
+<!-- BACK TO TOP BUTTON -->
+<!-- ============================================================ -->
+<button id="back-top" aria-label="Kembali ke atas" title="Ke atas">&#8679;</button>
+
+<!-- ============================================================ -->
+<!-- TOAST NOTIFICATION -->
+<!-- ============================================================ -->
+<div id="toast" role="status" aria-live="polite"></div>
+
+<!-- ============================================================ -->
+<!-- LIGHTBOX -->
+<!-- ============================================================ -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Tampilan foto produk">
+  <button id="lightbox-close" aria-label="Tutup">&#10005;</button>
+  <button class="lb-nav-btn" id="lb-prev" aria-label="Foto sebelumnya">&#8592;</button>
+  <img id="lightbox-img" src="" alt="" />
+  <button class="lb-nav-btn" id="lb-next" aria-label="Foto berikutnya">&#8594;</button>
+  <div id="lightbox-caption"></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PRODUCT QUICK VIEW DETAIL MODAL -->
+<!-- ============================================================ -->
+<div id="detail-modal" role="dialog" aria-modal="true" aria-label="Detail Produk">
+  <div class="detail-sheet">
+    <div class="sheet-handle"></div>
+    <button class="detail-close" id="detail-close-btn" aria-label="Tutup modal">&#10005;</button>
+    <div class="detail-img-wrap" id="detail-img-box" title="Klik untuk perbesar">
+      <img id="detail-img" src="" alt="Detail tas" />
+    </div>
+    <div class="detail-badges">
+      <span class="detail-badge-pill">&#10022; Vintage Preloved</span>
+      <span class="detail-badge-pill">&#129516; Deep Cleaned &bull; Wangi</span>
+      <span class="detail-badge-pill" style="color:#ffb088;">&#9889; 1 of 1 (Only 1 Pcs)</span>
+    </div>
+    <h3 class="detail-title" id="detail-title">Nama Produk</h3>
+    <div class="detail-price" id="detail-price">Rp0</div>
+    
+    <div class="detail-specs-grid">
+      <div class="spec-item">
+        <div class="spec-label">Kondisi</div>
+        <div class="spec-val" id="detail-cond">9.5/10 Like New</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label">Kapasitas</div>
+        <div class="spec-val" id="detail-space">Muat HP, Dompet, Makeup</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label">Kelengkapan</div>
+        <div class="spec-val">Dustbag &bull; Bubble Wrap</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label">Pengiriman</div>
+        <div class="spec-val">1x24 Jam dari Jogja</div>
+      </div>
+    </div>
+
+    <div class="detail-cta-stack">
+      <a href="#" class="btn-wa-big" id="detail-wa-btn" target="_blank" rel="noopener">
+        <span class="btn-icon">&#128172;</span> Pesan via WhatsApp (Auto-Teks)
+      </a>
+      <a href="https://shopee.co.id/softiegoods" class="btn-shopee" id="detail-sp-btn" target="_blank" rel="noopener">
+        <span class="btn-icon">&#128717;</span> Beli di Shopee (Bisa COD)
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- LIVE SOCIAL PROOF TICKER -->
+<!-- ============================================================ -->
+<div id="social-ticker" role="status" aria-live="polite">
+  <div class="ticker-icon" id="ticker-icon">&#128717;</div>
+  <div style="flex:1;">
+    <div class="ticker-content" id="ticker-text"><strong>Aurel (Bandung)</strong> baru saja order <em>Cocoa Sunday</em></div>
+    <div class="ticker-time" id="ticker-time">2 menit lalu &bull; via WhatsApp</div>
+  </div>
+  <button class="ticker-close" id="ticker-close-btn" aria-label="Tutup notifikasi">&times;</button>
+</div>
+
+<!-- ============================================================ -->
+<!-- CONFETTI CANVAS -->
+<!-- ============================================================ -->
+<canvas id="confetti-canvas"></canvas>
+
+
+<!-- ============================================================ -->
+<!-- JAVASCRIPT: All Interactive Features -->
+<!-- ============================================================ -->
+<script>
+/* ─────────────────────────────────────────────
+   1. FADE-UP ON SCROLL (IntersectionObserver)
+───────────────────────────────────────────── */
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-up').forEach((el) => fadeObserver.observe(el));
+
+
+/* ─────────────────────────────────────────────
+   2. SCROLL PROGRESS BAR
+───────────────────────────────────────────── */
+const progressBar = document.getElementById('scroll-progress');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (total > 0 ? (scrolled / total) * 100 : 0) + '%';
+}, { passive: true });
+
+
+/* ─────────────────────────────────────────────
+   3. BACK TO TOP BUTTON
+───────────────────────────────────────────── */
+const backTopBtn = document.getElementById('back-top');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) backTopBtn.classList.add('show');
+  else backTopBtn.classList.remove('show');
+}, { passive: true });
+backTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+
+/* ─────────────────────────────────────────────
+   4. ANIMATED STAT COUNTERS
+───────────────────────────────────────────── */
+function animateCounter(el, target, suffix, duration) {
+  let start = 0;
+  const step = target / (duration / 16);
+  const timer = setInterval(() => {
+    start = Math.min(start + step, target);
+    el.textContent = Math.floor(start) + suffix;
+    if (start >= target) clearInterval(timer);
+  }, 16);
+}
+const statsEl = document.querySelector('.hero-stats');
+const statsObserver = new IntersectionObserver((entries) => {
+  if (entries[0].isIntersecting) {
+    const nums = statsEl.querySelectorAll('.hero-stat-num');
+    animateCounter(nums[0], 500, '+', 1800);
+    animateCounter(nums[1], 5, '', 800);
+    nums[2].textContent = '4.9★';
+    statsObserver.disconnect();
+  }
+}, { threshold: 0.5 });
+if (statsEl) statsObserver.observe(statsEl);
+
+
+/* ─────────────────────────────────────────────
+   5. TOAST NOTIFICATION
+───────────────────────────────────────────── */
+const toastEl = document.getElementById('toast');
+let toastTimer;
+function showToast(msg, duration = 3000) {
+  clearTimeout(toastTimer);
+  toastEl.textContent = msg;
+  toastEl.classList.add('show');
+  toastTimer = setTimeout(() => toastEl.classList.remove('show'), duration);
+}
+
+// Trigger toast on CTA clicks
+document.querySelectorAll('[id*="shopee"]').forEach(a => {
+  a.addEventListener('click', () => showToast('&#128717; Menuju Shopee SOFTIE GOODS...'));
+});
+document.querySelectorAll('[id*="wa"]').forEach(a => {
+  a.addEventListener('click', () => showToast('&#128172; Membuka WhatsApp Admin...'));
+});
+
+
+/* ─────────────────────────────────────────────
+   6. RIPPLE EFFECT on Buttons & CTAs
+───────────────────────────────────────────── */
+function addRipple(el, e) {
+  const rect = el.getBoundingClientRect();
+  const wave = document.createElement('span');
+  wave.className = 'ripple-wave';
+  wave.style.top  = (e.clientY - rect.top)  + 'px';
+  wave.style.left = (e.clientX - rect.left) + 'px';
+  el.appendChild(wave);
+  wave.addEventListener('animationend', () => wave.remove());
+}
+document.querySelectorAll('.btn-primary,.btn-secondary,.btn-shopee,.btn-wa-big,.float-cta a,.product-cta').forEach(btn => {
+  btn.classList.add('ripple-host');
+  btn.addEventListener('click', (e) => addRipple(btn, e));
+});
+
+
+/* ─────────────────────────────────────────────
+   7. IMAGE LIGHTBOX
+───────────────────────────────────────────── */
+// Collect all product images
+const lightboxImages = [
+  {
+    src: 'gamabr-produk/WhatsApp Image 2026-10-19 at 21.26.13.jpeg',
+    caption: 'Cocoa Sunday — Rp40.000'
+  },
+  {
+    src: 'gamabr-produk/WhatsApp Image 2026-10-19 at 21.26.14 (1).jpeg',
+    caption: 'Pink Petal — Rp45.000'
+  },
+  {
+    src: 'gamabr-produk/WhatsApp Image 2026-10-19 at 21.26.14 (2).jpeg',
+    caption: 'Rainbow Monogram — Rp55.000'
+  },
+  {
+    src: 'gamabr-produk/WhatsApp Image 2026-10-19 at 21.26.14.jpeg',
+    caption: 'Cloudy White — Rp35.000'
+  },
+  {
+    src: 'gamabr-produk/WhatsApp Image 2026-10-19 at 21.26.15.jpeg',
+    caption: 'Rosy Argyle — Rp55.000'
+  }
+];
+
+const lb        = document.getElementById('lightbox');
+const lbImg     = document.getElementById('lightbox-img');
+const lbCaption = document.getElementById('lightbox-caption');
+const lbClose   = document.getElementById('lightbox-close');
+const lbPrev    = document.getElementById('lb-prev');
+const lbNext    = document.getElementById('lb-next');
+let lbIndex = 0;
+
+function openLightbox(index) {
+  lbIndex = ((index % lightboxImages.length) + lightboxImages.length) % lightboxImages.length;
+  lbImg.src = lightboxImages[lbIndex].src;
+  lbImg.alt = lightboxImages[lbIndex].caption;
+  lbCaption.textContent = lightboxImages[lbIndex].caption;
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  lb.classList.remove('open');
+  document.body.style.overflow = '';
+  lbImg.src = '';
+}
+
+// Open on product image click
+document.querySelectorAll('.product-img-wrap img').forEach((img, i) => {
+  img.addEventListener('click', () => openLightbox(i));
+});
+// Also open from hero collage
+document.querySelectorAll('.hero-collage img').forEach((img, i) => {
+  img.style.cursor = 'zoom-in';
+  img.addEventListener('click', () => openLightbox(i));
+});
+
+lbClose.addEventListener('click', closeLightbox);
+lb.addEventListener('click', (e) => { if (e.target === lb) closeLightbox(); });
+lbPrev.addEventListener('click', (e) => { e.stopPropagation(); openLightbox(lbIndex - 1); });
+lbNext.addEventListener('click', (e) => { e.stopPropagation(); openLightbox(lbIndex + 1); });
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape')      closeLightbox();
+  if (e.key === 'ArrowLeft')   openLightbox(lbIndex - 1);
+  if (e.key === 'ArrowRight')  openLightbox(lbIndex + 1);
+});
+
+// Touch swipe for lightbox
+let lbTouchX = 0;
+lb.addEventListener('touchstart', (e) => { lbTouchX = e.touches[0].clientX; }, { passive: true });
+lb.addEventListener('touchend',   (e) => {
+  const diff = lbTouchX - e.changedTouches[0].clientX;
+  if (Math.abs(diff) > 40) openLightbox(diff > 0 ? lbIndex + 1 : lbIndex - 1);
+}, { passive: true });
+
+
+/* ─────────────────────────────────────────────
+   8. BENEFIT ACCORDION
+───────────────────────────────────────────── */
+document.querySelectorAll('.benefit-item').forEach(item => {
+  // Add toggle button
+  const toggle = document.createElement('span');
+  toggle.className = 'benefit-toggle';
+  toggle.innerHTML = '+';
+  item.appendChild(toggle);
+
+  item.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.benefit-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+  // Open first by default after short delay
+});
+// Auto-open first benefit
+setTimeout(() => {
+  const first = document.querySelector('.benefit-item');
+  if (first) first.classList.add('open');
+}, 800);
+
+
+/* ─────────────────────────────────────────────
+   9. PRICE ROW TAP HIGHLIGHT
+───────────────────────────────────────────── */
+document.querySelectorAll('.price-row').forEach(row => {
+  row.addEventListener('click', () => {
+    document.querySelectorAll('.price-row').forEach(r => r.classList.remove('selected'));
+    row.classList.add('selected');
+    const name = row.querySelector('.price-name').textContent.trim();
+    const price = row.querySelector('.price-tag').textContent.trim();
+    showToast('&#128717; ' + name + ' ' + price + ' — Lihat di Shopee!');
+  });
+});
+
+
+/* ─────────────────────────────────────────────
+   10. TESTIMONIAL AUTO-SLIDER + DOTS
+───────────────────────────────────────────── */
+const testiScroll = document.querySelector('.testi-scroll');
+const testiCards  = document.querySelectorAll('.testi-card');
+const CARD_W = 280 + 14; // card width + gap
+let testiIndex = 0;
+let testiAuto;
+
+// Create dots container
+if (testiScroll && testiCards.length > 0) {
+  const dotsWrap = document.createElement('div');
+  dotsWrap.className = 'testi-dots';
+  testiCards.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'testi-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Testimoni ' + (i + 1));
+    dot.addEventListener('click', () => {
+      goToTesti(i);
+      resetAuto();
+    });
+    dotsWrap.appendChild(dot);
+  });
+  testiScroll.parentNode.insertBefore(dotsWrap, testiScroll.nextSibling);
+
+  function updateDots() {
+    dotsWrap.querySelectorAll('.testi-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === testiIndex);
+    });
+  }
+
+  function goToTesti(index) {
+    testiIndex = Math.max(0, Math.min(index, testiCards.length - 1));
+    testiScroll.scrollTo({ left: testiIndex * CARD_W, behavior: 'smooth' });
+    updateDots();
+  }
+
+  function startAuto() {
+    testiAuto = setInterval(() => {
+      testiIndex = (testiIndex + 1) % testiCards.length;
+      goToTesti(testiIndex);
+    }, 4000);
+  }
+
+  function resetAuto() {
+    clearInterval(testiAuto);
+    startAuto();
+  }
+
+  // Sync dots with manual scroll
+  testiScroll.addEventListener('scroll', () => {
+    const idx = Math.round(testiScroll.scrollLeft / CARD_W);
+    if (idx !== testiIndex) {
+      testiIndex = idx;
+      updateDots();
+    }
+  }, { passive: true });
+
+  // Pause auto on touch
+  testiScroll.addEventListener('touchstart', () => clearInterval(testiAuto), { passive: true });
+  testiScroll.addEventListener('touchend', () => { resetAuto(); }, { passive: true });
+
+  startAuto();
+}
+
+
+/* ─────────────────────────────────────────────
+   11. WHO-CARD & FACILITY-CARD HOVER GLOW
+───────────────────────────────────────────── */
+document.querySelectorAll('.who-card, .facility-card').forEach(card => {
+  card.addEventListener('touchstart', function() {
+    this.style.borderColor = 'var(--rose)';
+  }, { passive: true });
+  card.addEventListener('touchend', function() {
+    setTimeout(() => { this.style.borderColor = ''; }, 400);
+  }, { passive: true });
+});
+
+
+/* ─────────────────────────────────────────────
+   12. PRODUCT SCROLL — swipe indicator dots
+───────────────────────────────────────────── */
+const prodScroll = document.querySelector('.product-scroll');
+const prodCards  = document.querySelectorAll('.product-card');
+if (prodScroll && prodCards.length > 0) {
+  const prodDotsWrap = document.createElement('div');
+  prodDotsWrap.className = 'testi-dots';
+  prodDotsWrap.style.marginTop = '8px';
+  prodCards.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'testi-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Produk ' + (i + 1));
+    dot.addEventListener('click', () => {
+      prodScroll.scrollTo({ left: i * (200 + 14), behavior: 'smooth' });
+    });
+    prodDotsWrap.appendChild(dot);
+  });
+  prodScroll.parentNode.insertBefore(prodDotsWrap, prodScroll.nextSibling);
+
+  prodScroll.addEventListener('scroll', () => {
+    const idx = Math.round(prodScroll.scrollLeft / (200 + 14));
+    prodDotsWrap.querySelectorAll('.testi-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === idx);
+    });
+  }, { passive: true });
+}
+
+
+/* ─────────────────────────────────────────────
+   13. FLASH SALE COUNTDOWN TIMER
+───────────────────────────────────────────── */
+(function initCountdown() {
+  const hEl = document.getElementById('timer-h');
+  const mEl = document.getElementById('timer-m');
+  const sEl = document.getElementById('timer-s');
+  if (!hEl || !mEl || !sEl) return;
+
+  // Set target to 2 hours 47 mins from first load, persistent in session
+  let endTime = sessionStorage.getItem('softie_drop_end');
+  if (!endTime) {
+    endTime = Date.now() + (2 * 3600 + 47 * 60 + 28) * 1000;
+    sessionStorage.setItem('softie_drop_end', endTime);
+  } else {
+    endTime = parseInt(endTime, 10);
+  }
+
+  function updateTimer() {
+    let diff = Math.max(0, Math.floor((endTime - Date.now()) / 1000));
+    if (diff <= 0) {
+      // Loop with 3 hours
+      endTime = Date.now() + (3 * 3600) * 1000;
+      sessionStorage.setItem('softie_drop_end', endTime);
+      diff = 3 * 3600;
+    }
+    const h = String(Math.floor(diff / 3600)).padStart(2, '0');
+    const m = String(Math.floor((diff % 3600) / 60)).padStart(2, '0');
+    const s = String(diff % 60).padStart(2, '0');
+    hEl.textContent = h;
+    mEl.textContent = m;
+    sEl.textContent = s;
+  }
+  updateTimer();
+  setInterval(updateTimer, 1000);
+})();
+
+
+/* ─────────────────────────────────────────────
+   14. CONFETTI GENERATOR (Pure Canvas)
+───────────────────────────────────────────── */
+function launchConfetti(x = window.innerWidth / 2, y = window.innerHeight / 2) {
+  const canvas = document.getElementById('confetti-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const colors = ['#c9856a', '#d4a574', '#e8c4b2', '#f5ece4', '#25D366', '#EE4D2D'];
+  const particles = [];
+  const COUNT = 60;
+
+  for (let i = 0; i < COUNT; i++) {
+    const angle = Math.random() * Math.PI * 2;
+    const speed = Math.random() * 8 + 3;
+    particles.push({
+      x: x,
+      y: y,
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed - 3,
+      size: Math.random() * 6 + 4,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      alpha: 1,
+      decay: Math.random() * 0.02 + 0.015,
+      tilt: Math.random() * 10
+    });
+  }
+
+  let animId;
+  function render() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    let alive = false;
+    particles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += 0.18; // gravity
+      p.vx *= 0.98; // friction
+      p.alpha -= p.decay;
+      if (p.alpha > 0) {
+        alive = true;
+        ctx.save();
+        ctx.globalAlpha = Math.max(0, p.alpha);
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.ellipse(p.x, p.y, p.size, p.size * 0.6, p.tilt, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+    });
+
+    if (alive) {
+      animId = requestAnimationFrame(render);
+    } else {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      cancelAnimationFrame(animId);
+    }
+  }
+  render();
+}
+
+
+/* ─────────────────────────────────────────────
+   15. VOUCHER CLAIM & COPY
+───────────────────────────────────────────── */
+const claimBtn = document.getElementById('btn-claim-voucher');
+if (claimBtn) {
+  claimBtn.addEventListener('click', (e) => {
+    if (navigator.vibrate) navigator.vibrate(20);
+    const code = 'SOFTIE10K';
+    navigator.clipboard?.writeText(code).catch(() => {});
+    
+    // Confetti
+    const rect = claimBtn.getBoundingClientRect();
+    launchConfetti(rect.left + rect.width / 2, rect.top + rect.height / 2);
+
+    claimBtn.innerHTML = '<span>&#10003; Tersalin!</span>';
+    claimBtn.style.background = '#25D366';
+    claimBtn.style.color = '#fff';
+    showToast('&#127881; Kode voucher SOFTIE10K berhasil disalin!');
+
+    setTimeout(() => {
+      claimBtn.innerHTML = '<span>&#9986; Salin Lagi</span>';
+      claimBtn.style.background = '';
+      claimBtn.style.color = '';
+    }, 4000);
+  });
+}
+
+
+/* ─────────────────────────────────────────────
+   16. WISHLIST FAVORITES (localStorage)
+───────────────────────────────────────────── */
+const favStorageKey = 'softie_favorites_v1';
+let favs = [];
+try {
+  favs = JSON.parse(localStorage.getItem(favStorageKey)) || [];
+} catch(e) { favs = []; }
+
+function syncFavUI() {
+  const countEl = document.getElementById('fav-count');
+  if (countEl) countEl.textContent = favs.length;
+
+  document.querySelectorAll('.fav-btn').forEach(btn => {
+    const id = btn.getAttribute('data-fav-id');
+    const isFav = favs.includes(id);
+    btn.classList.toggle('active', isFav);
+    btn.innerHTML = isFav ? '&#10084;&#65039;' : '&#9825;';
+  });
+}
+syncFavUI();
+
+document.querySelectorAll('.fav-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (navigator.vibrate) navigator.vibrate(15);
+    const id = btn.getAttribute('data-fav-id');
+    const card = btn.closest('.product-card');
+    const name = card ? card.getAttribute('data-name') : 'Tas';
+
+    if (favs.includes(id)) {
+      favs = favs.filter(x => x !== id);
+      showToast('&#128148; ' + name + ' dihapus dari favorit');
+    } else {
+      favs.push(id);
+      showToast('&#10084;&#65039; ' + name + ' ditambahkan ke favorit!');
+      const rect = btn.getBoundingClientRect();
+      launchConfetti(rect.left + rect.width / 2, rect.top + rect.height / 2);
+    }
+    try { localStorage.setItem(favStorageKey, JSON.stringify(favs)); } catch(e) {}
+    syncFavUI();
+
+    // If currently filtered by fav, re-filter
+    const activeChip = document.querySelector('.filter-chip.active');
+    if (activeChip && activeChip.getAttribute('data-filter') === 'fav') {
+      applyFilter('fav');
+    }
+  });
+});
+
+
+/* ─────────────────────────────────────────────
+   17. FILTER CHIPS
+───────────────────────────────────────────── */
+function applyFilter(filterType) {
+  const cards = document.querySelectorAll('.product-card');
+  cards.forEach(card => {
+    const id = card.getAttribute('data-id');
+    const cat = card.getAttribute('data-cat') || '';
+    const price = parseInt(card.getAttribute('data-price') || '0', 10);
+    let show = true;
+
+    if (filterType === 'all') {
+      show = true;
+    } else if (filterType === 'budget') {
+      show = price <= 45000;
+    } else if (filterType === 'premium') {
+      show = cat.includes('premium');
+    } else if (filterType === 'fav') {
+      show = favs.includes(id);
+    }
+
+    if (show) {
+      card.classList.remove('hidden');
+      card.style.opacity = '1';
+      card.style.transform = 'scale(1)';
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+}
+
+document.querySelectorAll('.filter-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    if (navigator.vibrate) navigator.vibrate(10);
+    document.querySelectorAll('.filter-chip').forEach(c => {
+      c.classList.remove('active');
+      c.setAttribute('aria-selected', 'false');
+    });
+    chip.classList.add('active');
+    chip.setAttribute('aria-selected', 'true');
+    const filter = chip.getAttribute('data-filter');
+    applyFilter(filter);
+
+    if (filter === 'fav' && favs.length === 0) {
+      showToast('&#128147; Belum ada tas yang kamu sukai. Tap &#9825; untuk menyimpan!');
+    }
+  });
+});
+
+
+/* ─────────────────────────────────────────────
+   18. PRODUCT DETAIL MODAL & DYNAMIC WHATSAPP
+───────────────────────────────────────────── */
+const detailModal = document.getElementById('detail-modal');
+const detailClose = document.getElementById('detail-close-btn');
+const detailImg   = document.getElementById('detail-img');
+const detailTitle = document.getElementById('detail-title');
+const detailPrice = document.getElementById('detail-price');
+const detailCond  = document.getElementById('detail-cond');
+const detailSpace = document.getElementById('detail-space');
+const detailWaBtn = document.getElementById('detail-wa-btn');
+const detailSpBtn = document.getElementById('detail-sp-btn');
+
+function openProductDetail(card) {
+  if (!card || !detailModal) return;
+  const name  = card.getAttribute('data-name');
+  const price = card.querySelector('.product-price')?.textContent.trim() || 'Rp40.000';
+  const img   = card.getAttribute('data-img');
+  const cond  = card.getAttribute('data-cond') || '9.5/10 Like New &bull; Deep Cleaned';
+  const space = card.getAttribute('data-space') || 'Muat HP, dompet, makeup';
+
+  detailImg.src = img;
+  detailImg.alt = name;
+  detailTitle.textContent = name;
+  detailPrice.textContent = price;
+  detailCond.innerHTML = cond;
+  detailSpace.textContent = space;
+
+  // Generate customized WhatsApp Link
+  const waMsg = encodeURIComponent(
+    `Halo Admin SOFTIE GOODS! 👋\nSaya mau order tas: *${name}* (${price}).\nApakah masih ready? Mau tanya detail kondisinya ya kak ✨`
+  );
+  detailWaBtn.href = `https://wa.me/6281234567890?text=${waMsg}`;
+  detailSpBtn.href = 'https://shopee.co.id/softiegoods';
+
+  detailModal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeProductDetail() {
+  if (!detailModal) return;
+  detailModal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Click Detail button
+document.querySelectorAll('[data-open-detail]').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const card = btn.closest('.product-card');
+    openProductDetail(card);
+  });
+});
+
+// Click on Product Info or Image to open Detail
+document.querySelectorAll('.product-card').forEach(card => {
+  card.querySelector('.product-info')?.addEventListener('click', (e) => {
+    if (e.target.closest('a') || e.target.closest('button')) return;
+    openProductDetail(card);
+  });
+});
+
+if (detailClose) detailClose.addEventListener('click', closeProductDetail);
+if (detailModal) {
+  detailModal.addEventListener('click', (e) => {
+    if (e.target === detailModal) closeProductDetail();
+  });
+}
+document.getElementById('detail-img-box')?.addEventListener('click', () => {
+  const currentSrc = detailImg.src;
+  const idx = lightboxImages.findIndex(x => currentSrc.includes(encodeURI(x.src)) || currentSrc.includes(x.src));
+  closeProductDetail();
+  openLightbox(idx >= 0 ? idx : 0);
+});
+
+
+/* ─────────────────────────────────────────────
+   19. FAQ ACCORDION
+───────────────────────────────────────────── */
+document.querySelectorAll('.faq-item').forEach(item => {
+  const q = item.querySelector('.faq-q');
+  if (!q) return;
+  q.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    // Optional: close other FAQs for clean single-view
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-q')?.setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      q.setAttribute('aria-expanded', 'true');
+      if (navigator.vibrate) navigator.vibrate(10);
+    }
+  });
+});
+
+
+/* ─────────────────────────────────────────────
+   20. LIVE SOCIAL PROOF TICKER
+───────────────────────────────────────────── */
+(function initSocialTicker() {
+  const ticker = document.getElementById('social-ticker');
+  const textEl = document.getElementById('ticker-text');
+  const timeEl = document.getElementById('ticker-time');
+  const iconEl = document.getElementById('ticker-icon');
+  const closeBtn = document.getElementById('ticker-close-btn');
+  if (!ticker || !textEl) return;
+
+  const events = [
+    { text: '<strong>Aurel (Bandung)</strong> baru saja order <em>Cocoa Sunday</em>', time: '2 menit lalu &bull; via WhatsApp', icon: '🛍️' },
+    { text: '<strong>Siska (Surabaya)</strong> checkout <em>Pink Petal</em> di Shopee', time: '5 menit lalu &bull; Shopee COD', icon: '📦' },
+    { text: '<strong>Nadia (Semarang)</strong> membeli <em>Rainbow Monogram</em>', time: '8 menit lalu &bull; via WhatsApp', icon: '✨' },
+    { text: '<strong>Dinda (Yogyakarta)</strong> memberi rating ★ 5.0 di Shopee', time: '12 menit lalu &bull; "Tasnya super aesthetic!"', icon: '⭐' },
+    { text: '🔥 <em>Rosy Argyle</em> sedang dilihat oleh 6 orang sekarang!', time: 'Realtime update &bull; Stok sisa 1 pcs', icon: '🔥' },
+    { text: '<strong>Ratu (Jakarta)</strong> baru saja klaim voucher <em>SOFTIE10K</em>', time: 'Baru saja &bull; Diskon Rp10.000', icon: '🎉' }
+  ];
+
+  let evIdx = 0;
+  let tickerTimer;
+  let dismissed = false;
+
+  function showNextEvent() {
+    if (dismissed) return;
+    const ev = events[evIdx];
+    textEl.innerHTML = ev.text;
+    timeEl.innerHTML = ev.time;
+    iconEl.textContent = ev.icon;
+    ticker.classList.add('show');
+
+    // Hide after 4.5 seconds
+    setTimeout(() => {
+      ticker.classList.remove('show');
+    }, 4500);
+
+    evIdx = (evIdx + 1) % events.length;
+  }
+
+  // First show after 4s
+  setTimeout(() => {
+    showNextEvent();
+    tickerTimer = setInterval(showNextEvent, 10000);
+  }, 4000);
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      ticker.classList.remove('show');
+      dismissed = true;
+      clearInterval(tickerTimer);
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
