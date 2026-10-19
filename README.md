@@ -20,7 +20,7 @@ Landing page responsif dan interaktif bertema vintage/aesthetic untuk toko thrif
 PROJEK/
 ├── index.html                  # Halaman utama (GitHub Pages ready)
 ├── softie_goods_landing_page.html
-├── gamabr-produk/              # Galeri foto produk tas vintage
+├── gambar-produk/              # Galeri foto produk tas vintage
 └── README.md
 ```
 
